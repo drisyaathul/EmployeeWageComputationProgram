@@ -12,5 +12,16 @@ public class EmployeeWageComputation {
             System.out.println("Employee is PRESENT");
         else
             System.out.println("Employee is ABSENT");
+//UC2
+        int wagePerHour = 20;
+        int fullDayHour = 8;
+        int dailyWage;
+
+        dailyWage = attendance * wagePerHour * fullDayHour;
+        if (attendance == 1)
+            System.out.println("Employee Wage Per Day = "+dailyWage);
+        else
+            System.out.println("Employee Wage Per Day = "+dailyWage);
+
     }
 }
