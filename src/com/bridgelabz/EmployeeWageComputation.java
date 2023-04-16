@@ -7,6 +7,8 @@ public class EmployeeWageComputation {
     public static void main(String[] args) {
         System.out.println("*** Welcome To EMPLOYEE WAGE COMPUTATION PROGRAM ***");
         int wagePerHour = 20;
+        int workingDays = 20;   //given total working days in a month(UC5)
+        int monthlyWage;
         int dailyWage;
         int workingHour;
         Random random = new Random();
@@ -26,6 +28,8 @@ public class EmployeeWageComputation {
                 break;
         }
         dailyWage = workingHour * wagePerHour;
+        monthlyWage = dailyWage * workingDays;
         System.out.println("Employee Daily Wage = " +dailyWage);
+        System.out.println("Employee Monthly Wage = " +monthlyWage);
     }
 }
