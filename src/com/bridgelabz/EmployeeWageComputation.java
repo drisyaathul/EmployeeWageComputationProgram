@@ -32,7 +32,7 @@ public class EmployeeWageComputation {
                     workingHour = 8;
                     break;
                 default:
-                    System.out.println("Employee is PART-TIME");
+                    System.out.println("Employee is HALF-DAY");
                     workingHour = 4;
                     break;
             }
