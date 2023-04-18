@@ -7,10 +7,13 @@ public class EmployeeWageComputation {
     private static final int wagePerHour = 20;
     private static final int workingDays = 20;
     private static final int max_workingHours = 100;
-/*
-    Used the EmployeeWage() Method to Compute the Attendance (UC7)
-*/
-    public void EmployeeWage(){
+    public void ComputeEmployeeWage(String companyName, int wagePerHour, int workingDays, int max_workingHours){
+
+        System.out.println("Name of the Company : " +companyName);
+        System.out.println("Company Wage per Hour : " +wagePerHour+ " $");
+        System.out.println("Company Working Days : " +workingDays+ " Days");
+        System.out.println("Company Maximum Working Hours : " +max_workingHours+ " Hrs");
+
         int totalWage = 0;
         int dailyWage;
         int workingHour;
@@ -42,17 +45,17 @@ public class EmployeeWageComputation {
             System.out.println("Employee Working Hour Per Day = "+workingHour);
             System.out.println("Employee Daily Wage = " + dailyWage);
         }
-        System.out.println("**********************************************");
-        System.out.println("Employee Monthly Wage = " + totalWage+ " $ ");
+        System.out.println();
+        System.out.println("Employee of " +companyName+ " Monthly Wage is " + totalWage+ " $ ");
+        System.out.println("--------------------------------------");
     }
     public static void main(String[] args) {
 
         System.out.println("*** Welcome To EMPLOYEE WAGE COMPUTATION PROGRAM ***");
-    /*
-        Create class method to compute Employee wage And calling the object compute Employee wage
-        in the main method
-    */
-        EmployeeWageComputation employeeWageComputation = new EmployeeWageComputation();
-        employeeWageComputation.EmployeeWage();
+
+        EmployeeWageComputation company = new EmployeeWageComputation();
+        company.ComputeEmployeeWage("ABB", 50, 25, 100);
+        company.ComputeEmployeeWage("TCS", 30, 20, 160);
+        company.ComputeEmployeeWage("INFO PARK", 20, 24, 120);
     }
 }
