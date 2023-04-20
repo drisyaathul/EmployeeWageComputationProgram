@@ -3,7 +3,9 @@ package com.bridgelabz;
 import java.util.Random;
 
 public class EmpWageBuilder {
-
+/*
+  Use Instance Variable instead of function parameters(UC9)
+ */
     private final String companyName;
     private final int wagePerHour ;
     private final int workingDays ;
