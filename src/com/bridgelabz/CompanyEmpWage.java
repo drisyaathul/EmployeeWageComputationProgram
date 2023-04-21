@@ -2,14 +2,14 @@ package com.bridgelabz;
 
 import java.util.Random;
 
-public class CompanyEmpWage {
+public class CompanyEmpWage implements EmployeeWage {
     /*
      Use Instance Variable instead of function parameters(UC9)
     */
     private final String companyName;
-    private  int wagePerHour = 20;
-    private  int workingDays = 20;
-    private  int max_workingHours = 100;
+    private final int wagePerHour ;
+    private final int workingDays ;
+    private final int max_workingHours ;
     /*
     Generating Constructors
      */
@@ -25,9 +25,8 @@ public class CompanyEmpWage {
         int dailyWage;
         int workingHour;
         int totalWorkingHour = 0;
-        int day = 0;
         //computation
-        while (totalWorkingHour < this.max_workingHours && day < this.workingDays){
+        for (int day = 1; day <= workingDays; day++){
             /*
              * Attendance to check the employee is full tym work or part tym or Absent
              * We use the switch case For Attendance
