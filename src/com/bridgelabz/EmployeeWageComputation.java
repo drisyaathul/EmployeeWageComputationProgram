@@ -15,17 +15,14 @@ public class EmployeeWageComputation {
  */
         companyEmpWages.add(new CompanyEmpWage("ABB",50,25,100));
         int empWageAbb = companyEmpWages.get(0).ComputeEmpWage();
-        System.out.println(companyEmpWages.get(0));
         System.out.println("Employee of ABB Monthly Wage is " +empWageAbb+ " $ ");
         System.out.println("----------------------------------------------------");
         companyEmpWages.add(new CompanyEmpWage("TCS",30,30,160));
         int empWageTcs = companyEmpWages.get(0).ComputeEmpWage();
-        System.out.println(companyEmpWages.get(1));
         System.out.println("Employee of TCS Monthly Wage is " +empWageTcs+ " $ ");
         System.out.println("----------------------------------------------------");
         companyEmpWages.add(new CompanyEmpWage("INFO-PARK",20,24,120));
         int empWageInfoPark = companyEmpWages.get(0).ComputeEmpWage();
-        System.out.println(companyEmpWages.get(2));
         System.out.println("Employee of INFO-PARK Monthly Wage is " +empWageInfoPark+ " $ ");
     }
 }
