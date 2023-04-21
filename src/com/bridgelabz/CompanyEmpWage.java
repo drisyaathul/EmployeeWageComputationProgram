@@ -6,7 +6,7 @@ public class CompanyEmpWage implements EmployeeWage {
     /*
      Use Instance Variable instead of function parameters(UC9)
     */
-    private final String companyName;
+    public final String companyName;
     public int wagePerHour;
     public int workingDays;
     public int max_workingHours;
@@ -28,7 +28,7 @@ public class CompanyEmpWage implements EmployeeWage {
         int day = 0;
         //computation
         System.out.println("---Employee Daily Wage---");// to print at top
-        while (totalWorkingHour < max_workingHours && day < workingDays){
+        while (totalWorkingHour <= max_workingHours && day < workingDays){
             /*
              * Attendance to check the employee is full tym work or part tym or Absent
              * We use the switch case For Attendance
