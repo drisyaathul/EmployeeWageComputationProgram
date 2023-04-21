@@ -29,6 +29,7 @@ public class CompanyEmpWage implements EmployeeWage {
         int totalWorkingHour = 0;
         int day = 0;
         //computation
+        System.out.println("---Employee Daily Wage---");
         while (workingHour <= max_workingHours && day < workingDays) {
             /*
              * Attendance to check the employee is full tym work or part tym or Absent
