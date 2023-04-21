@@ -1,6 +1,5 @@
 package com.bridgelabz;
 
-import java.util.ArrayList;
 import java.util.Random;
 
 public class CompanyEmpWage {
@@ -20,7 +19,7 @@ Generating Constructors
         this.workingDays = workingDays;
         this.max_workingHours = max_workingHours;
     }
-    public void ComputeEmpWage(){
+    public int ComputeEmpWage(){
     //variables
         int totalWage = 0;
         int dailyWage;
@@ -34,18 +33,17 @@ Generating Constructors
  */
             Random random = new Random();
             int attendance = random.nextInt(3);
-            //System.out.println("DAY => "+day+ ";");
             switch (attendance) {
                 case 0:
-                    //System.out.println("Employee is ABSENT");
+                    // ABSENT
                     workingHour = 0;
                     break;
                 case 1:
-                    //System.out.println("Employee is PRESENT");
+                    //PRESENT
                     workingHour = 8;
                     break;
                 default:
-                    //System.out.println("Employee is HALF-DAY");
+                    //HALF-DAY
                     workingHour = 4;
                     break;
             }
@@ -58,11 +56,8 @@ Generating Constructors
             dailyWage = workingHour * wagePerHour;
             totalWage += dailyWage ;
             totalWorkingHour += workingHour;
-//            System.out.println("Employee Working Hour Per Day = "+workingHour);
-//            System.out.println("Employee Daily Wage = " + dailyWage);
         }
-        System.out.println("Employee of "+companyName+" Monthly Wage is " + totalWage+ " $ ");
-        System.out.println("--------------------------------------------------------------");
+        return totalWage;
     }
     @Override
     public String toString() {
