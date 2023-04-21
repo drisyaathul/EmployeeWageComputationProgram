@@ -15,7 +15,7 @@ public class EmployeeWageComputation {
         int dailyWage;
         int workingHour = 0;
         int totalWorkingHour = 0;
-        int day = 0;
+        int day = 1;
 
         while (day <= workingDays && workingHour <= max_workingHours) {
         Random random = new Random();
@@ -42,7 +42,6 @@ public class EmployeeWageComputation {
             totalWorkingHour += workingHour;
             System.out.println("Employee Working Hour Per Day = "+workingHour);
             System.out.println("Employee Daily Wage = " + dailyWage);
-            System.out.println(totalWorkingHour);
         }
         System.out.println("**********************************************");
         System.out.println("Employee Monthly Wage = " + totalWage+ " $ ");
