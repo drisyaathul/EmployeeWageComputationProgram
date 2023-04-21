@@ -7,9 +7,9 @@ public class CompanyEmpWage implements EmployeeWage {
      Use Instance Variable instead of function parameters(UC9)
     */
     private final String companyName;
-    private final int wagePerHour ;
-    private final int workingDays ;
-    private final int max_workingHours ;
+    private int wagePerHour = 20;
+    private int workingDays = 20;
+    private int max_workingHours = 100;
     /*
     Generating Constructors
      */
@@ -59,9 +59,10 @@ public class CompanyEmpWage implements EmployeeWage {
         }
         return totalWage;
     }
+
     @Override
     public String toString() {
-        return "EmpWageBuilder{" +
+        return "CompanyEmpWage{" +
                 "companyName='" + companyName + '\'' +
                 ", wagePerHour=" + wagePerHour +
                 ", workingDays=" + workingDays +
@@ -69,4 +70,5 @@ public class CompanyEmpWage implements EmployeeWage {
                 '}';
     }
 }
+
 
