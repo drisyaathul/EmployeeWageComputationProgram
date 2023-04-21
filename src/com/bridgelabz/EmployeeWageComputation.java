@@ -13,10 +13,11 @@ public class EmployeeWageComputation {
     public void EmployeeWage(){
         int totalWage = 0;
         int dailyWage;
-        int workingHour;
+        int workingHour = 0;
         int totalWorkingHour = 0;
+        int day = 0;
 
-        for (int day = 1; day <= workingDays; day++) {
+        while (day <= workingDays && workingHour <= max_workingHours) {
 
             Random random = new Random();
             int attendance = random.nextInt(3);
@@ -36,6 +37,7 @@ public class EmployeeWageComputation {
                     workingHour = 4;
                     break;
             }
+            day++;
             dailyWage = workingHour * wagePerHour;
             totalWage += dailyWage ;
             totalWorkingHour += workingHour;
