@@ -3,35 +3,37 @@ package com.bridgelabz;
 import java.util.Random;
 
 public class CompanyEmpWage {
-/*
- Use Instance Variable instead of function parameters(UC9)
-*/
-    private final String companyName;
-    private final int wagePerHour ;
-    private final int workingDays ;
-    private final int max_workingHours ;
-/*
-Generating Constructors
- */
+    /*
+     Use Instance Variable instead of function parameters(UC9)
+    */
+    public final String companyName;
+    public int wagePerHour;
+    public int workingDays;
+    public int max_workingHours;
+
+    /*
+    Generating Constructors
+     */
     public CompanyEmpWage(String companyName, int wagePerHour, int workingDays, int max_workingHours) {
-        this.companyName =companyName;
+        this.companyName = companyName;
         this.wagePerHour = wagePerHour;
         this.workingDays = workingDays;
         this.max_workingHours = max_workingHours;
     }
-    public int ComputeEmpWage(){
-    //variables
+
+    public int ComputeEmpWage() {
+        //variables
         int totalWage = 0;
         int dailyWage;
         int workingHour = 0;
         int totalWorkingHour = 0;
-        int day = 1;
-    //computation
-        while (workingHour <= max_workingHours && day <= workingDays) {
-/*
- * Attendance to check the employee is full tym work or part tym or Absent
- * We use the switch case For Attendance
- */
+        int day = 0;
+        //computation
+        while (workingHour <= max_workingHours && day < workingDays) {
+            /*
+             * Attendance to check the employee is full tym work or part tym or Absent
+             * We use the switch case For Attendance
+             */
             Random random = new Random();
             int attendance = random.nextInt(3);
             switch (attendance) {
@@ -56,7 +58,7 @@ Generating Constructors
   */
             day++;
             dailyWage = workingHour * wagePerHour;
-            totalWage += dailyWage ;
+            totalWage += dailyWage;
             totalWorkingHour += workingHour;
         }
         return totalWage;
