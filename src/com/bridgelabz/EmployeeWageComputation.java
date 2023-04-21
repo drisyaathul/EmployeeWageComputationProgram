@@ -1,33 +1,32 @@
 package com.bridgelabz;
 
+import java.util.ArrayList;
+
 public class EmployeeWageComputation {
-    /*
-          To create array of many CompanyEmpWage Object
-           */
-    public static CompanyEmpWage objectArray[] = new CompanyEmpWage[3];
+      //To create arrayList instead of Array for many list of Companies to manage Employee
+    public static ArrayList<CompanyEmpWage> companyEmpWages = new ArrayList<CompanyEmpWage>();
 
     public static void main(String[] args) {
 
         System.out.println("*** Welcome To EMPLOYEE WAGE COMPUTATION PROGRAM ***");
         System.out.println();
  /*
-   Create class method to compute Employee wage And calling the object of Company Employee wage in the main method
+   Calling Method Using ArrayList
  */
-        objectArray[0] = new CompanyEmpWage("ABB",50,25,100);
-        int empWageAbb = objectArray[0].ComputeEmpWage();
-        System.out.println(objectArray[0]);
+        companyEmpWages.add(new CompanyEmpWage("ABB",50,25,100));
+        int empWageAbb = companyEmpWages.get(0).ComputeEmpWage();
+        System.out.println(companyEmpWages.get(0));
         System.out.println("Employee of ABB Monthly Wage is " +empWageAbb+ " $ ");
-        System.out.println();
-        objectArray[1] = new CompanyEmpWage("TCS",30,30,160);
-        int empWageTcs = objectArray[1].ComputeEmpWage();
-        System.out.println(objectArray[1]);
+        System.out.println("----------------------------------------------------");
+        companyEmpWages.add(new CompanyEmpWage("TCS",30,30,160));
+        int empWageTcs = companyEmpWages.get(0).ComputeEmpWage();
+        System.out.println(companyEmpWages.get(1));
         System.out.println("Employee of TCS Monthly Wage is " +empWageTcs+ " $ ");
-        System.out.println();
-        objectArray[2] = new CompanyEmpWage("INFO PARK",20,24,120);
-        int empWageInfoPark = objectArray[2].ComputeEmpWage();
-        System.out.println(objectArray[2]);
-        System.out.println("Employee of INFO PARK Monthly Wage is " +empWageInfoPark+ " $ ");
-
+        System.out.println("----------------------------------------------------");
+        companyEmpWages.add(new CompanyEmpWage("INFO-PARK",20,24,120));
+        int empWageInfoPark = companyEmpWages.get(0).ComputeEmpWage();
+        System.out.println(companyEmpWages.get(2));
+        System.out.println("Employee of INFO-PARK Monthly Wage is " +empWageInfoPark+ " $ ");
     }
 }
 
