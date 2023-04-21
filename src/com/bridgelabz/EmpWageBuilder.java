@@ -23,10 +23,11 @@ Generating Constructors
         //   variables
         int totalWage = 0;
         int dailyWage;
-        int workingHour;
+        int workingHour = 0;
         int totalWorkingHour = 0;
+        int day = 1;
         //computation
-        for (int day = 1; day <= workingDays; day++) {
+        while (workingHour <= max_workingHours && day <= workingDays) {
  /*
     * Attendance to check the employee is full tym work or part tym or Absent
     * We use the switch case For Attendance
@@ -55,6 +56,7 @@ Generating Constructors
  * Calculating Total Wage = Daily Wage
  * Calculating  Total working hrs  = Max Working hrs
   */
+            day++;
             dailyWage = workingHour * wagePerHour;
             totalWage += dailyWage ;
             totalWorkingHour += workingHour;
@@ -65,6 +67,7 @@ Generating Constructors
         System.out.println("Employee of Monthly Wage is " + totalWage+ " $ ");
         System.out.println("--------------------------------------");
     }
+
     @Override
     public String toString() {
         return "EmpWageBuilder{" +
@@ -75,4 +78,5 @@ Generating Constructors
                 '}';
     }
 }
+
 
