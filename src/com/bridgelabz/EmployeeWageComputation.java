@@ -15,7 +15,7 @@ public class EmployeeWageComputation {
         int dailyWage;
         int workingHour = 0;
         int totalWorkingHour = 0;
-        int day = 0;
+        int day = 1;
 
         while (day <= workingDays && workingHour <= max_workingHours) {
 
