@@ -2,8 +2,8 @@ package com.bridgelabz;
 
 public class EmployeeWageComputation {
     /*
-    To create array of many CompanyEmpWage Object
-     */
+      To create array of many CompanyEmpWage Object
+       */
     public static CompanyEmpWage objectArray[] = new CompanyEmpWage[3];
 
     public static void main(String[] args) {

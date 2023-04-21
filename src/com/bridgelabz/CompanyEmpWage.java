@@ -2,17 +2,17 @@ package com.bridgelabz;
 
 import java.util.Random;
 
-public class CompanyEmpWage {
-/*
- Use Instance Variable instead of function parameters(UC9)
-*/
+public class CompanyEmpWage implements EmployeeWage {
+    /*
+     Use Instance Variable instead of function parameters(UC9)
+    */
     private final String companyName;
     private final int wagePerHour ;
     private final int workingDays ;
     private final int max_workingHours ;
-/*
-Generating Constructors
- */
+    /*
+    Generating Constructors
+     */
     public CompanyEmpWage(String companyName, int wagePerHour, int workingDays, int max_workingHours) {
         this.companyName =companyName;
         this.wagePerHour = wagePerHour;
@@ -20,17 +20,17 @@ Generating Constructors
         this.max_workingHours = max_workingHours;
     }
     public int ComputeEmpWage(){
-    //variables
+        //variables
         int totalWage = 0;
         int dailyWage;
         int workingHour;
         int totalWorkingHour = 0;
-    //computation
-        for (int day = 1; day <= workingDays; day++) {
-/*
- * Attendance to check the employee is full tym work or part tym or Absent
- * We use the switch case For Attendance
- */
+        //computation
+        for (int day = 1; day <= workingDays; day++){
+            /*
+             * Attendance to check the employee is full tym work or part tym or Absent
+             * We use the switch case For Attendance
+             */
             Random random = new Random();
             int attendance = random.nextInt(3);
             switch (attendance) {
