@@ -4,9 +4,9 @@ import java.util.Random;
 
 public class EmployeeWageComputation {
 
-    private static final int wagePerHour = 20;
-    private static final int workingDays = 20;
-    private static final int max_workingHours = 100;
+    public static final int wagePerHour = 20;
+    public static final int workingDays = 20;
+    public static final int max_workingHours = 100;
 /*
     Used the EmployeeWage() Method to Compute the Attendance (UC7)
 */
