@@ -4,9 +4,9 @@ import java.util.Random;
 
 public class EmployeeWageComputation {
 
-    private static final int wagePerHour = 20;
-    private static final int workingDays = 20;
-    private static final int max_workingHours = 100;
+    public static int wagePerHour;
+    public static int workingDays;
+    public static int max_workingHours;
     public void ComputeEmployeeWage(String companyName, int wagePerHour, int workingDays, int max_workingHours){
 
         System.out.println("Name of the Company : " +companyName);
