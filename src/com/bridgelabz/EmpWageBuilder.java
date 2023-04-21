@@ -6,10 +6,10 @@ public class EmpWageBuilder {
 /*
   Use Instance Variable instead of function parameters(UC9)
  */
-    private final String companyName;
-    private final int wagePerHour ;
-    private final int workingDays ;
-    private final int max_workingHours ;
+    public final String companyName;
+    public int wagePerHour;
+    public int workingDays;
+    public int max_workingHours;
 /*
 Generating Constructors
  */
@@ -67,7 +67,6 @@ Generating Constructors
         System.out.println("Employee of Monthly Wage is " + totalWage+ " $ ");
         System.out.println("--------------------------------------");
     }
-
     @Override
     public String toString() {
         return "EmpWageBuilder{" +
