@@ -7,9 +7,9 @@ public class CompanyEmpWage implements EmployeeWage {
      Use Instance Variable instead of function parameters(UC9)
     */
     private final String companyName;
-    private int wagePerHour = 20;
-    private int workingDays = 20;
-    private int max_workingHours = 100;
+    private int wagePerHour;
+    private int workingDays;
+    private int max_workingHours;
     /*
     Generating Constructors
      */
@@ -23,10 +23,11 @@ public class CompanyEmpWage implements EmployeeWage {
         //variables
         int totalWage = 0;
         int dailyWage;
-        int workingHour;
+        int workingHour = 0;
         int totalWorkingHour = 0;
+        int day = 1;
         //computation
-        for (int day = 1; day <= workingDays; day++){
+        while (workingHour <= max_workingHours && day <= workingDays){
             /*
              * Attendance to check the employee is full tym work or part tym or Absent
              * We use the switch case For Attendance
@@ -53,6 +54,7 @@ public class CompanyEmpWage implements EmployeeWage {
  * Calculating Total Wage = Daily Wage
  * Calculating  Total working hrs  = Max Working hrs
   */
+            day++;
             dailyWage = workingHour * wagePerHour;
             totalWage += dailyWage ;
             totalWorkingHour += workingHour;
