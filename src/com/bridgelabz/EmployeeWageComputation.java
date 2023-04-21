@@ -13,7 +13,7 @@ public class EmployeeWageComputation {
  /*
    Calling Method Using ArrayList
  */
-        companyEmpWages.add(new CompanyEmpWage("ABB",50,25,100));
+        companyEmpWages.add(new CompanyEmpWage("ABB",50,35,100));
         int empWageAbb = companyEmpWages.get(0).ComputeEmpWage();
         System.out.println("Employee of ABB Monthly Wage is " +empWageAbb+ " $ ");
         System.out.println("----------------------------------------------------");
