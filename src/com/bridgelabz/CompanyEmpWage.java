@@ -65,7 +65,7 @@ public class CompanyEmpWage {
     }
     @Override
     public String toString() {
-        return "EmpWageBuilder{" +
+        return "CompanyEmpWage{" +
                 "companyName='" + companyName + '\'' +
                 ", wagePerHour=" + wagePerHour +
                 ", workingDays=" + workingDays +
