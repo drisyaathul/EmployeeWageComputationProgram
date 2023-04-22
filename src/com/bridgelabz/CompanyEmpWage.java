@@ -2,7 +2,7 @@ package com.bridgelabz;
 
 import java.util.Random;
 
-public class CompanyEmpWage implements EmployeeWage {
+public class CompanyEmpWage {
     /*
   Use Instance Variable instead of function parameters(UC9)
  */
@@ -10,15 +10,17 @@ public class CompanyEmpWage implements EmployeeWage {
     public int wagePerHour;
     public int workingDays;
     public int max_workingHours;
+    public int totalEmpWage;
 
     /*
-    Generating Constructors
+    Generating parameterized constructor to get and set the values
      */
     public CompanyEmpWage(String companyName, int wagePerHour, int workingDays, int max_workingHours) {
         this.companyName = companyName;
         this.wagePerHour = wagePerHour;
         this.workingDays = workingDays;
         this.max_workingHours = max_workingHours;
+        this.totalEmpWage = 0;
     }
 
     public int ComputeEmpWage() {
@@ -29,7 +31,6 @@ public class CompanyEmpWage implements EmployeeWage {
         int totalWorkingHour = 0;
         int day = 0;
         //computation
-        System.out.println("---Employee Daily Wage---");
         while (workingHour <= max_workingHours && day < workingDays) {
             /*
              * Attendance to check the employee is full tym work or part tym or Absent
@@ -61,10 +62,11 @@ public class CompanyEmpWage implements EmployeeWage {
             dailyWage = workingHour * wagePerHour;
             totalWage += dailyWage;
             totalWorkingHour += workingHour;
-            System.out.println("DAY"+day+" => "+dailyWage+" $");
+            //System.out.println("DAY"+day+" => "+dailyWage+" $");
         }
         return totalWage;
     }
+
     @Override
     public String toString() {
         return "CompanyEmpWage{" +
@@ -73,6 +75,9 @@ public class CompanyEmpWage implements EmployeeWage {
                 ", workingDays=" + workingDays +
                 ", max_workingHours=" + max_workingHours +
                 '}';
+    }
+    public void setTotalEmpWage(int totalEmpWage) {
+        this.totalEmpWage = totalEmpWage;
     }
 }
 

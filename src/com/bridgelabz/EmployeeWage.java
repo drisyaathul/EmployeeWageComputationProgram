@@ -1,5 +1,7 @@
 package com.bridgelabz;
 
 public interface EmployeeWage {
-    int ComputeEmpWage();
+    public void ComputeEmpWage();
+    public void addCompanyEmpWage(String companyName, int wagePerHour, int workingDays, int max_workingHours);
+    public int getTotalWage(String company);
 }
